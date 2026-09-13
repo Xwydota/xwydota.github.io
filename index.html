@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">КалькуляторОнлайн — 100 бесплатных онлайн-калькуляторов</title>
+    <meta id="page-desc" name="description" content="Сборник из 100 полезных бесплатных онлайн-калькуляторов для математики, финансов, бизнеса, дат и повседневных задач. Быстрые вычисления без регистрации.">
+    <link rel="canonical" href="https://example.github.io/">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#" class="logo" onclick="showHome(event)">🧮 Calc100</a>
+            <nav class="nav-links">
+                <a href="#" onclick="showHome(event)">Все калькуляторы</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- ГЛАВНАЯ СТРАНИЦА (КАТАЛОГ) -->
+        <div id="home-view" class="view active">
+            <section class="hero">
+                <h1>100 полезных онлайн-калькуляторов</h1>
+                <p>Быстрые и точные расчёты для финансов, математики, бизнеса и повседневной жизни.</p>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Поиск калькулятора (например: ипотека, НДС, ИМТ)..." oninput="filterCalculators()">
+                </div>
+            </section>
+
+            <section class="categories-filter" id="categories-container">
+                <!-- Категории генерируются динамически -->
+            </section>
+
+            <section class="catalog-grid" id="calculators-grid">
+                <!-- Карточки калькуляторов генерируются динамически -->
+            </section>
+        </div>
+
+        <!-- СТРАНИЦА ОТДЕЛЬНОГО КАЛЬКУЛЯТОРА -->
+        <div id="calculator-view" class="view">
+            <div class="breadcrumbs">
+                <a href="#" onclick="showHome(event)">Главная</a> &gt; <span id="bc-category">Категория</span> &gt; <span id="bc-title">Калькулятор</span>
+            </div>
+            
+            <div class="calculator-container">
+                <h1 id="calc-h1">Название калькулятора</h1>
+                <p id="calc-desc" class="calc-description">Описание калькулятора...</p>
+
+                <div class="calc-card-body">
+                    <div id="calc-inputs" class="inputs-grid">
+                        <!-- Динамические поля ввода -->
+                    </div>
+                    
+                    <div class="calc-actions">
+                        <button class="btn-primary" onclick="calculate()">Рассчитать</button>
+                        <button class="btn-secondary" onclick="clearCalculator()">Очистить</button>
+                    </div>
+
+                    <div id="calc-result" class="result-box">
+                        <span class="result-label">Результат:</span>
+                        <span id="result-value" class="result-value">—</span>
+                    </div>
+                </div>
+
+                <div class="calc-theory">
+                    <h3>Формула</h3>
+                    <p id="calc-formula-text">—</p>
+
+                    <h3>Примеры использования</h3>
+                    <div id="calc-examples-text">—</div>
+
+                    <h3>Часто задаваемые вопросы (FAQ)</h3>
+                    <div id="calc-faq-container"></div>
+                </div>
+
+                <div class="related-section">
+                    <h3>Похожие калькуляторы</h3>
+                    <div id="related-grid" class="related-grid"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Calc100. Все вычисления выполняются в вашем браузере.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
