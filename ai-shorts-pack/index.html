@@ -12,16 +12,16 @@
 .badge{display:inline-block;border:1px solid #2cbea0;color:#8ff3d8;padding:8px 12px;border-radius:999px;font-size:13px}
 h1{font-size:58px;line-height:1.02;margin:18px 0 16px;letter-spacing:-2px}.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}
 .sub{font-size:20px;line-height:1.55;color:var(--muted);max-width:700px}.price{font-size:44px;font-weight:800;margin:24px 0 8px}
-.cta{display:inline-block;background:var(--accent);color:#04120e;text-decoration:none;font-weight:800;padding:16px 24px;border-radius:14px;margin-top:14px;border:0;cursor:pointer;font-size:16px}
+.cta{display:inline-block;background:var(--accent);color:#04120e;text-decoration:none;font-weight:800;padding:16px 24px;border-radius:14px;margin-top:14px;border:0;cursor:pointer;font-size:16px}.cta2{display:inline-block;background:#17283d;color:#eaf6ff;text-decoration:none;font-weight:800;padding:16px 24px;border-radius:14px;margin-top:14px;margin-left:10px;border:1px solid #2f4a67;font-size:16px}
 .note{font-size:13px;color:var(--muted);margin-top:10px}.card{background:rgba(14,27,46,.9);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
 .cover{min-height:410px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 70% 20%,#0b5c61 0,#0e1b2e 38%,#08111d 80%);overflow:hidden;position:relative}
 .cover:before{content:"AI";position:absolute;right:-20px;top:-55px;font-size:220px;font-weight:900;color:rgba(51,230,177,.07)}
 .cover h2{font-size:42px;margin:0 0 12px}.cover p{color:#a9bdd5}.mini{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px}.mini div{padding:12px;border:1px solid #284059;border-radius:12px;background:#0a1525}
 section{padding:30px 0}h3{font-size:34px;margin-bottom:18px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:22px}.feature b{display:block;font-size:18px;margin-bottom:8px}.feature span{color:var(--muted);line-height:1.5}
 .list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.item{padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#0b1727}
-.paybox{margin-top:18px;padding:18px;border:1px solid #2b4b58;border-radius:14px;background:#081624}.paylabel{font-size:13px;color:var(--muted);margin-bottom:8px}.wallet{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;word-break:break-all;font-size:16px;padding:13px;background:#050d18;border:1px solid var(--line);border-radius:10px}.warn{margin-top:14px;color:#ffd38a;font-size:14px;line-height:1.5}.ok{margin-left:10px;color:#8ff3d8;font-size:14px}
+.paybox{margin-top:18px;padding:18px;border:1px solid #2b4b58;border-radius:14px;background:#081624}.paylabel{font-size:13px;color:var(--muted);margin-bottom:8px}.wallet{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;word-break:break-all;font-size:16px;padding:13px;background:#050d18;border:1px solid var(--line);border-radius:10px}.warn{margin-top:14px;color:#ffd38a;font-size:14px;line-height:1.5}.ok{margin-left:10px;color:#8ff3d8;font-size:14px}.steps{margin:18px 0 0;padding-left:22px;color:#c7d6e8;line-height:1.7}
 .footer{text-align:center;color:var(--muted);padding:50px 0 70px;font-size:13px}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.list{grid-template-columns:1fr}h1{font-size:42px}.cover{min-height:320px}}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.list{grid-template-columns:1fr}h1{font-size:42px}.cover{min-height:320px}.cta2{margin-left:0;display:block;width:max-content}}
 </style>
 </head>
 <body>
@@ -77,7 +77,13 @@ section{padding:30px 0}h3{font-size:34px;margin-bottom:18px}.grid{display:grid;g
         <button class="cta" type="button" onclick="copyWallet()">Copy wallet address</button><span class="ok" id="copied"></span>
         <div class="warn"><strong>Important:</strong> send USDT only through the TRON (TRC20) network. Sending through another network may result in loss of funds.</div>
       </div>
-      <p class="note">Keep your transaction hash after payment so your purchase can be verified.</p>
+      <ol class="steps">
+        <li>Send exactly 29 USDT via TRON (TRC20).</li>
+        <li>Copy your transaction hash (TXID).</li>
+        <li>Send the TXID to <strong>@qqtttyyyq</strong> on Telegram.</li>
+        <li>After payment is verified, you will receive the PDF.</li>
+      </ol>
+      <a class="cta2" href="https://t.me/qqtttyyyq" target="_blank" rel="noopener">Send TXID on Telegram</a>
     </div>
   </section>
 
